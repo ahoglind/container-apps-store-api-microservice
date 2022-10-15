@@ -95,7 +95,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Azure Login
-        uses: Azure/actions/login@V1
+        uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
@@ -116,4 +116,4 @@ jobs:
                 containerRegistry=${{ env.REGISTRY }} \
                 containerRegistryUsername=${{ github.actor }} \
                 containerRegistryPassword=${{ secrets.GITHUB_TOKEN }} \
-                deployApim=true
+                deployApim=false
